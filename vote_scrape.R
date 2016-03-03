@@ -123,3 +123,31 @@ Calhoun.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="co
 Calhoun.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyCalhoun"]/div/div/div[2]/table') %>% html_table())
 Calhoun.dist <- rbind(Calhoun.dem, Calhoun.rep)
 Calhoun.dist$iowa.district <- "Calhoun"
+
+#colorado ---
+co <- "http://www.politico.com/2016-election/results/map/president/colorado"
+
+Adams.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyAdams"]/div/div/div[1]/table') %>% html_table())
+Adams.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyAdams"]/div/div/div[2]/table') %>% html_table())
+Adams.dist <- rbind(Adams.dem, Adams.rep)
+Adams.dist$co.district <- "Adams"
+
+Alamosa.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyAlamosa"]/div/div/div[1]/table') %>% html_table())
+Alamosa.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyAlamosa"]/div/div/div[2]/table') %>% html_table())
+Alamosa.dist <- rbind(Alamosa.dem, Alamosa.rep)
+Alamosa.dist$co.district <- "Alamosa"
+
+Arapahoe.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyArapahoe"]/div/div/div[1]/table') %>% html_table())
+Arapahoe.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyArapahoe"]/div/div/div[2]/table') %>% html_table())
+Arapahoe.dist <- rbind(Arapahoe.dem, Arapahoe.rep)
+Arapahoe.dist$co.district <- "Arapahoe"
+
+Archuleta.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyArchuleta"]/div/div/div[1]/table') %>% html_table())
+Archuleta.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyArchuleta"]/div/div/div[2]/table') %>% html_table())
+Archuleta.dist <- rbind(Archuleta.dem, Archuleta.rep)
+Archuleta.dist$co.district <- "Archuleta"
+
+Baca.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyBaca"]/div/div/div[1]/table') %>% html_table())
+Baca.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyBaca"]/div/div/div[2]/table') %>% html_table())
+Baca.dist <- rbind(Baca.dem, Baca.rep)
+Baca.dist$co.district <- "Baca"
