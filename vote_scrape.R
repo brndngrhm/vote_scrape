@@ -92,8 +92,8 @@ BlackHawk.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="
 BlackHawk.dist <- rbind(BlackHawk.dem, BlackHawk.rep)
 BlackHawk.dist$iowa.district <- "BlackHawk "
 
-Boone.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBoone  "]/div/div/div[1]/table') %>% html_table())
-Boone.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBoone  "]/div/div/div[2]/table') %>% html_table())
+Boone.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBoone"]/div/div/div[1]/table') %>% html_table())
+Boone.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBoone"]/div/div/div[2]/table') %>% html_table())
 Boone.dist <- rbind(Boone.dem, Boone.rep)
 Boone.dist$iowa.district <- "Boone  "
 
@@ -113,12 +113,13 @@ BuenaVista.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id=
 BuenaVista.dist <- rbind(BuenaVista.dem, BuenaVista.rep)
 BuenaVista.dist$iowa.district <- "BuenaVista"
 
+#problem
 Butler.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyButler"]/div/div/div[1]/table') %>% html_table())
 Butler.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyButler"]/div/div/div[2]/table') %>% html_table())
 Butler.dist <- rbind(Butler.dem, Butler.rep)
 Butler.dist$iowa.district <- "Butler"
 
-Audubon.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAudubon"]/div/div/div[1]/table') %>% html_table())
-Audubon.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAudubon"]/div/div/div[2]/table') %>% html_table())
-Audubon.dist <- rbind(Audubon.dem, Audubon.rep)
-Audubon.dist$iowa.district <- "Audubon"
+Calhoun.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyCalhoun"]/div/div/div[1]/table') %>% html_table())
+Calhoun.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyCalhoun"]/div/div/div[2]/table') %>% html_table())
+Calhoun.dist <- rbind(Calhoun.dem, Calhoun.rep)
+Calhoun.dist$iowa.district <- "Calhoun"
