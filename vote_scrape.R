@@ -58,3 +58,67 @@ minn$percent <- as.numeric(minn$percent)
 minn$percent <- minn$percent/100
 minn$count <- as.numeric(minn$count)
 write.csv(minn, file = "C:/Users/GRA/Desktop/Misc/R Working Directory/Other/vote_scrape/minn.csv")
+
+#Iowa ----
+
+iowa <- "http://www.politico.com/2016-election/results/map/president/iowa"
+Adair.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAdair"]/div/div/div[1]/table') %>% html_table())
+Adair.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAdair"]/div/div/div[2]/table') %>% html_table())
+Adair.dist <- rbind(Adair.dem, Adair.rep)
+Adair.dist$iowa.district <- "Adair"
+
+Adams.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAdams"]/div/div/div[1]/table') %>% html_table())
+Adams.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAdams"]/div/div/div[2]/table') %>% html_table())
+Adams.dist <- rbind(Adams.dem, Adams.rep)
+Adams.dist$iowa.district <- "Adams"
+
+Allamakee.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAllamakee"]/div/div/div[1]/table') %>% html_table())
+Allamakee.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAllamakee"]/div/div/div[2]/table') %>% html_table())
+Allamakee.dist <- rbind(Allamakee.dem, Allamakee.rep)
+Allamakee.dist$iowa.district <- "Allamakee"
+
+Appanoose.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAppanoose"]/div/div/div[1]/table') %>% html_table())
+Appanoose.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAppanoose"]/div/div/div[2]/table') %>% html_table())
+Appanoose.dist <- rbind(Appanoose.dem, Appanoose.rep)
+Appanoose.dist$iowa.district <- "Appanoose"
+
+Benton.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBenton"]/div/div/div[1]/table') %>% html_table())
+Benton.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBenton"]/div/div/div[2]/table') %>% html_table())
+Benton.dist <- rbind(Benton.dem, Benton.rep)
+Benton.dist$iowa.district <- "Benton"
+
+BlackHawk.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBlackHawk"]/div/div/div[1]/table') %>% html_table())
+BlackHawk.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBlackHawk"]/div/div/div[1]/table') %>% html_table())
+BlackHawk.dist <- rbind(BlackHawk.dem, BlackHawk.rep)
+BlackHawk.dist$iowa.district <- "BlackHawk "
+
+Boone.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBoone  "]/div/div/div[1]/table') %>% html_table())
+Boone.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBoone  "]/div/div/div[2]/table') %>% html_table())
+Boone.dist <- rbind(Boone.dem, Boone.rep)
+Boone.dist$iowa.district <- "Boone  "
+
+Bremer.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBremer"]/div/div/div[1]/table') %>% html_table())
+Bremer.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBremer"]/div/div/div[2]/table') %>% html_table())
+Bremer.dist <- rbind(Bremer.dem, Bremer.rep)
+Bremer.dist$iowa.district <- "Bremer"
+
+Buchanan.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBuchanan"]/div/div/div[1]/table') %>% html_table())
+Buchanan.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBuchanan"]/div/div/div[2]/table') %>% html_table())
+Buchanan.dist <- rbind(Buchanan.dem, Buchanan.rep)
+Buchanan.dist$iowa.district <- "Buchanan"
+
+#problem
+BuenaVista.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBuenaVista"]/div/div/div[1]/table') %>% html_table())
+BuenaVista.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyBuenaVista"]/div/div/div[2]/table') %>% html_table())
+BuenaVista.dist <- rbind(BuenaVista.dem, BuenaVista.rep)
+BuenaVista.dist$iowa.district <- "BuenaVista"
+
+Butler.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyButler"]/div/div/div[1]/table') %>% html_table())
+Butler.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyButler"]/div/div/div[2]/table') %>% html_table())
+Butler.dist <- rbind(Butler.dem, Butler.rep)
+Butler.dist$iowa.district <- "Butler"
+
+Audubon.dem <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAudubon"]/div/div/div[1]/table') %>% html_table())
+Audubon.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="countyAudubon"]/div/div/div[2]/table') %>% html_table())
+Audubon.dist <- rbind(Audubon.dem, Audubon.rep)
+Audubon.dist$iowa.district <- "Audubon"
