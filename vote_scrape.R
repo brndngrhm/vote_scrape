@@ -124,7 +124,7 @@ Calhoun.rep <- as.data.frame(iowa %>% html() %>% html_nodes(xpath = '//*[@id="co
 Calhoun.dist <- rbind(Calhoun.dem, Calhoun.rep)
 Calhoun.dist$iowa.district <- "Calhoun"
 
-#colorado ---
+#colorado ----
 co <- "http://www.politico.com/2016-election/results/map/president/colorado"
 
 Adams.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyAdams"]/div/div/div[1]/table') %>% html_table())
@@ -151,3 +151,45 @@ Baca.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyB
 Baca.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyBaca"]/div/div/div[2]/table') %>% html_table())
 Baca.dist <- rbind(Baca.dem, Baca.rep)
 Baca.dist$co.district <- "Baca"
+
+Bent.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyBent"]/div/div/div[1]/table') %>% html_table())
+Bent.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyBent"]/div/div/div[2]/table') %>% html_table())
+Bent.dist <- rbind(Bent.dem, Bent.rep)
+Bent.dist$co.district <- "Bent"
+
+Boulder.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyBoulder"]/div/div/div[1]/table') %>% html_table())
+Boulder.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyBoulder"]/div/div/div[2]/table') %>% html_table())
+Boulder.dist <- rbind(Boulder.dem, Boulder.rep)
+Boulder.dist$co.district <- "Boulder"
+
+Broomfield.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyBroomfield"]/div/div/div[1]/table') %>% html_table())
+Broomfield.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyBroomfield"]/div/div/div[2]/table') %>% html_table())
+Broomfield.dist <- rbind(Broomfield.dem, Broomfield.rep)
+Broomfield.dist$co.district <- "Broomfield"
+
+Chaffee.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyChaffee"]/div/div/div[1]/table') %>% html_table())
+Chaffee.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyChaffee"]/div/div/div[2]/table') %>% html_table())
+Chaffee.dist <- rbind(Chaffee.dem, Chaffee.rep)
+Chaffee.dist$co.district <- "Chaffee"
+
+Cheyenne.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyCheyenne"]/div/div/div[1]/table') %>% html_table())
+Cheyenne.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyCheyenne"]/div/div/div[2]/table') %>% html_table())
+Cheyenne.dist <- rbind(Cheyenne.dem, Cheyenne.rep)
+Cheyenne.dist$co.district <- "Cheyenne"
+
+#problem
+ClearCreek.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyClearCreek"]/div/div/div[1]/table') %>% html_table())
+ClearCreek.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyClearCreek"]/div/div/div[2]/table') %>% html_table())
+ClearCreek.dist <- rbind(ClearCreek.dem, ClearCreek.rep)
+ClearCreek.dist$co.district <- "ClearCreek"
+
+Conejos.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyConejos"]/div/div/div[1]/table') %>% html_table())
+Conejos.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyConejos"]/div/div/div[2]/table') %>% html_table())
+Conejos.dist <- rbind(Conejos.dem, Conejos.rep)
+Conejos.dist$co.district <- "Conejos"
+
+Costilla.dem <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyCostilla"]/div/div/div[1]/table') %>% html_table())
+Costilla.rep <- as.data.frame(co %>% html() %>% html_nodes(xpath = '//*[@id="countyCostilla"]/div/div/div[2]/table') %>% html_table())
+Costilla.dist <- rbind(Costilla.dem, Costilla.rep)
+Costilla.dist$co.district <- "Costilla"
+
